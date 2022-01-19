@@ -1,0 +1,59 @@
+sudo yum update 
+cd../..
+ls
+Cd user folder 
+ls 
+sudo su
+mkdir  tomcat-demo
+ls 
+cd tomcat-demo 
+ls 
+yum  install wget 
+wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.rpm"
+ls 
+yum install jdk-8u141-linux-x64.rpm
+ls 
+Tomcat installation:
+Go to tomcat file 
+Click on tar file 
+Click on tar.gz and click on copy link address
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.56/bin/apache-tomcat-9.0.56.tar.gz
+ ls 
+tar xvfz apache-tomcat-9.0.56.tar.gz
+ls 
+rm -r apache-tomcat-9.0.56.tar.gz
+rm -r  jdk-8u141-linux-x64.rpm
+ls 
+cd apache-tomcat-9.0.56
+ls 
+Go to bin folder 
+cd bin 
+ls 
+./startup.sh
+Tomcat server started
+ps -ef | grep tomcat
+wget http://localhost:8080
+ls 
+cd ../..
+ls 
+cd apache tomcat 
+ls 
+ls webapps/manager/META-INF/
+vi webapps/manager/META-INF/context.xml
+Custom tcp anywhere one and 0.0.0/0
+::/0
+vi conf/tomcat-users.xml
+<role rolename="manager-gui"/>
+<user username="admin" password="admin" roles="manager-gui"/>
+:wq 
+cd bin 
+./shutdown.sh 
+./startup.sh
+Deploy the war file 
+
+
+
+
+
+
+
